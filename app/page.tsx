@@ -9,8 +9,7 @@ const fadeUp = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black text-white px-6 py-14 space-y-24">
-
+    <main className="min-h-screen glow-bg bg-black text-white px-6 py-14 space-y-24 relative overflow-hidden">
       {/* HERO */}
       <motion.section
         variants={fadeUp}
