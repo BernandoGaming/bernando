@@ -27,3 +27,26 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes glowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glow-bg {
+  background: linear-gradient(
+    270deg,
+    rgba(0, 255, 255, 0.15),
+    rgba(168, 85, 247, 0.15),
+    rgba(236, 72, 153, 0.15)
+  );
+  background-size: 600% 600%;
+  animation: glowMove 18s ease infinite;
+}
