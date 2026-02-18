@@ -28,25 +28,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes glowMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.glow-bg {
+.bg-animated {
   background: linear-gradient(
-    270deg,
-    rgba(0, 255, 255, 0.15),
-    rgba(168, 85, 247, 0.15),
-    rgba(236, 72, 153, 0.15)
+    120deg,
+    #0f0f14,
+    #141420,
+    #0f0f14
   );
-  background-size: 600% 600%;
-  animation: glowMove 18s ease infinite;
+  background-size: 300% 300%;
+  animation: gradientMove 18s ease infinite;
+}
+
+.bg-noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/noise.png");
+  opacity: 0.04;
+  pointer-events: none;
 }
